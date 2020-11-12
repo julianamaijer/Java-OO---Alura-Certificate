@@ -1,6 +1,10 @@
 public class TestManager {
 
     public static void main(String[] args) {
+
+        Manager manager2 = new Manager();
+
+
         Manager manager = new Manager();
         manager.setName("Marco");
         manager.setNumberRegister("3333333-3");
@@ -11,7 +15,6 @@ public class TestManager {
         System.out.println(manager.getBonus());
 
         boolean autenticou = manager.enable(2222);
-
         System.out.println(autenticou);
     }
 

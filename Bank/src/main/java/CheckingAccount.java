@@ -1,4 +1,4 @@
-public class CheckingAccount extends Account {
+public class CheckingAccount extends Account implements Taxable {
 
     public CheckingAccount(int bankNumber, int number){
 
@@ -15,5 +15,9 @@ public class CheckingAccount extends Account {
     public boolean withdraw(double value) {
         double valueWithdraw = value + 0.2;
         return super.withdraw(valueWithdraw);
+    }
+
+    public double getTaxValue() {
+        return super.balance * 0.01;
     }
 }

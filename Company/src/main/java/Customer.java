@@ -1,14 +1,9 @@
-public class Officer extends Employee implements Enabled{
+public class Customer implements Enabled{
 
     private UtilEnabled utilEnabled;
 
-    public Officer(){
+    public Customer(){
         this.utilEnabled = new UtilEnabled();
-    }
-
-    @Override
-    public double getBonus() {
-        return 50;
     }
 
     public boolean enable(int password) {
@@ -19,5 +14,4 @@ public class Officer extends Employee implements Enabled{
     public void setPassword(int password) {
         this.utilEnabled.enable(password);
     }
-
 }

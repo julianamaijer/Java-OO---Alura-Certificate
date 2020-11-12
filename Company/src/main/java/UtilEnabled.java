@@ -1,8 +1,8 @@
-public abstract class EnabledEmployee extends Employee {
+public class UtilEnabled {
 
     private int password;
 
-    public boolean enable(int password){
+    public boolean enable(int password) {
         if (this.password == password){
             return true;
         }else {
@@ -12,9 +12,5 @@ public abstract class EnabledEmployee extends Employee {
 
     public void setPassword(int password) {
         this.password = password;
-    }
-
-    public int getPassword() {
-        return password;
     }
 }
