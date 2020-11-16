@@ -12,9 +12,9 @@ public class CheckingAccount extends Account implements Taxable {
     }
 
     @Override
-    public boolean withdraw(double value) {
+    public void withdraw(double value) throws InsufficientFundsException{
         double valueWithdraw = value + 0.2;
-        return super.withdraw(valueWithdraw);
+        super.withdraw(valueWithdraw);
     }
 
     public double getTaxValue() {

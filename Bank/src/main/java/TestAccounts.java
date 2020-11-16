@@ -1,6 +1,9 @@
 public class TestAccounts {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InsufficientFundsException{
+
+        CheckingAccount checkingAccount2 = null;
+        checkingAccount2.deposit(200.0);
 
         CheckingAccount checkingAccount = new CheckingAccount(111,111);
         checkingAccount.deposit(100);

@@ -17,22 +17,16 @@ public abstract class Account {
 
     public abstract void deposit(double value);
 
-    public boolean withdraw(double value) {
-        if(this.balance >= value) {
-            this.balance -= value;
-            return true;
-        } else {
-            return false;
+    public void withdraw(double value) throws InsufficientFundsException{
+        if(this.balance < value) {
+            throw new InsufficientFundsException("Saldo: " + this.balance + ", Valor: " + value);
         }
+        this.balance -= value;
     }
 
-    public boolean transfer(double value, Account destiny) {
-        if(this.withdraw(value)) {
-            destiny.deposit(value);
-            return true;
-        } else {
-            return false;
-        }
+    public void transfer(double value, Account destiny) throws InsufficientFundsException{
+        this.withdraw(value);
+        destiny.deposit(value);
     }
 
     public double getBalance(){
