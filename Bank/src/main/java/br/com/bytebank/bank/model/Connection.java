@@ -1,3 +1,5 @@
+package br.com.bytebank.bank.model;
+
 public class Connection implements AutoCloseable {
 
         public Connection() {

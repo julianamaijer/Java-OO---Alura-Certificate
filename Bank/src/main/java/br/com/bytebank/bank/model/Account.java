@@ -1,3 +1,11 @@
+package br.com.bytebank.bank.model;
+
+/**
+ * Represents an account
+ *
+ * @author Juliana Maijer
+ *
+ */
 public abstract class Account {
 
     protected double balance;
@@ -17,7 +25,7 @@ public abstract class Account {
 
     public abstract void deposit(double value);
 
-    public void withdraw(double value) throws InsufficientFundsException{
+    public void withdraw(double value) throws InsufficientFundsException {
         if(this.balance < value) {
             throw new InsufficientFundsException("Saldo: " + this.balance + ", Valor: " + value);
         }
@@ -67,6 +75,11 @@ public abstract class Account {
 
     public static int getTotal(){
         return Account.total;
+    }
+
+    @Override
+    public String toString() {
+        return "Number: " + this.number + " Bank Number: " + this.bankNumber;
     }
 
 }

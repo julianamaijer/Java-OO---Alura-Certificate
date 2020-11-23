@@ -1,3 +1,8 @@
+package br.com.bytebank.bank.test;
+
+import br.com.bytebank.bank.model.CheckingAccount;
+import br.com.bytebank.bank.model.InsufficientFundsException;
+
 public class TestWithdraw {
 
     public static void main(String[] args) {

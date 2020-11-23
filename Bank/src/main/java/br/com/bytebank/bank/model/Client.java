@@ -1,3 +1,12 @@
+package br.com.bytebank.bank.model;
+
+/**
+ * Represents a bytebank customer
+ *
+ * @author Juliana Maijer
+ * @version 0.1
+ *
+ */
 public class Client {
 
     private String name;

@@ -1,3 +1,9 @@
+package br.com.bytebank.bank.test;
+
+import br.com.bytebank.bank.model.CalculateTax;
+import br.com.bytebank.bank.model.CheckingAccount;
+import br.com.bytebank.bank.model.LifeInsurance;
+
 public class TestTaxable {
 
     public static void main(String[] args) {

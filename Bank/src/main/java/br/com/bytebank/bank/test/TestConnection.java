@@ -1,4 +1,6 @@
-import java.net.Socket;
+package br.com.bytebank.bank.test;
+
+import br.com.bytebank.bank.model.Connection;
 
 public class TestConnection {
 
