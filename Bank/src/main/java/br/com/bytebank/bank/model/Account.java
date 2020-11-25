@@ -1,12 +1,15 @@
 package br.com.bytebank.bank.model;
 
+import com.sun.corba.se.impl.oa.poa.AOMEntry;
+
+
 /**
  * Represents an account
  *
  * @author Juliana Maijer
  *
  */
-public abstract class Account {
+public abstract class Account extends Object implements Comparable<Account> {
 
     protected double balance;
     private int bankNumber;
@@ -78,8 +81,29 @@ public abstract class Account {
     }
 
     @Override
+    public boolean equals(Object ref){
+
+        Account another = (Account) ref;
+
+        if (this.bankNumber != another.bankNumber){
+            return false;
+        }
+
+        if (this.number != another.number){
+            return false;
+        }
+
+        return true;
+    }
+
+    @Override
+    public int compareTo(Account another) {
+        return Double.compare(this.balance, another.balance);
+    }
+
+    @Override
     public String toString() {
-        return "Number: " + this.number + " Bank Number: " + this.bankNumber;
+        return "Number: " + this.number + " Bank Number: " + this.bankNumber + ", Balance: " + this.balance;
     }
 
 }

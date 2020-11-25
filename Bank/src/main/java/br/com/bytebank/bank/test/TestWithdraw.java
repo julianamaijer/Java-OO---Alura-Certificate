@@ -1,5 +1,6 @@
 package br.com.bytebank.bank.test;
 
+import br.com.bytebank.bank.model.Account;
 import br.com.bytebank.bank.model.CheckingAccount;
 import br.com.bytebank.bank.model.InsufficientFundsException;
 
