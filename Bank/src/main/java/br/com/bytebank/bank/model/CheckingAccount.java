@@ -1,5 +1,7 @@
 package br.com.bytebank.bank.model;
 
+import java.io.Serializable;
+
 public class CheckingAccount extends Account implements Taxable {
 
     public CheckingAccount(int bankNumber, int number){

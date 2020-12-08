@@ -2,6 +2,8 @@ package br.com.bytebank.bank.model;
 
 import com.sun.corba.se.impl.oa.poa.AOMEntry;
 
+import java.io.Serializable;
+
 
 /**
  * Represents an account
@@ -9,12 +11,12 @@ import com.sun.corba.se.impl.oa.poa.AOMEntry;
  * @author Juliana Maijer
  *
  */
-public abstract class Account extends Object implements Comparable<Account> {
+public abstract class Account extends Object implements Comparable<Account>, Serializable {
 
     protected double balance;
     private int bankNumber;
     private int number;
-    private Client holder;
+    private transient Client holder;
     private static int total = 0;
 
     public Account(int agencia, int number){

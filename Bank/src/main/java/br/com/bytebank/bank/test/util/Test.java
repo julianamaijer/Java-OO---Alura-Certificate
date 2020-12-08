@@ -58,7 +58,7 @@ public class Test {
 
         list.forEach(
                 (account) -> System.out.println(account + ", " + account.getHolder().getName())
-        ); //para cada element, ele executa o sout
+        ); //for each element, it works sout
     }
 }
 
